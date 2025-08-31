@@ -4,6 +4,7 @@ import { StatusBar } from 'expo-status-bar';
 import { useFrameworkReady } from '@/hooks/useFrameworkReady';
 import { NativeWindStyleSheet } from "nativewind";
 import AsyncStorage from '@react-native-async-storage/async-storage';
+import Toaster from '@/components/Toaster';
 
 export default function RootLayout() {
   useFrameworkReady();
@@ -26,6 +27,7 @@ export default function RootLayout() {
         <Stack.Screen name="skill-details/[skillId]" options={{ title: 'Skill Details' }} />
         <Stack.Screen name="+not-found" />
       </Stack>
+      <Toaster />
       <StatusBar style="auto" />
     </>
   );
